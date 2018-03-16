@@ -218,6 +218,7 @@
         }
       
        function sendEmail(sheetName,ranges,eMailAlias) {
+    	   //setting null for empty cells to avoid null pointer
 			for(var i in ranges.values) { 
 			    var statusRow = ranges.values[i];
 			    for(var j = 0; j<11; j++) {

@@ -34,7 +34,7 @@
 	  if (morningStatusTime < 0 ) {
 		  morningStatusTime += 86400000; // it's after 10am, try 10am tomorrow.
 	  }
-		setTimeout(function(){//alert("It's Morning Status update time!");			
+		setTimeout(function(){ //alert("It's Morning Status update time!");			
 			if((now.getDay()+1)<6){
 				debugger;
 		  	 	generateReport(); 
@@ -246,7 +246,6 @@
 		    else{
 		    	subject+=' Status';
 		    }
-		    debugger;
 		    var currentDate = new Date();
 		    subject += ' '+currentDate.getDate()+'/'+(currentDate.getMonth()+1)+'/'+currentDate.getFullYear();
 			var content = "";
@@ -303,9 +302,7 @@
 	    	}
 		    else {
 		    	var div = document.getElementById('embContent');
-		    }
-		    
-		    
+		    }		    
 
 		    div.innerHTML += content;
 		    
